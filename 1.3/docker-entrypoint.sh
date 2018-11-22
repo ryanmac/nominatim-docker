@@ -8,10 +8,10 @@ NOMINATIM_PBF_URL=${NOMINATIM_PBF_URL:="http://localhost/uploads/osm/maldives-la
 
 # Retrieve Data Files
 curl $NOMINATIM_PBF_URL --create-dirs -o $NOMINATIM_DATA_PATH/$NOMINATIM_DATA_LABEL.osm.pbf
-curl http://localhost/uploads/osm/wikipedia_article.sql.bin --create-dirs -o $NOMINATIM_DATA_PATH/wikipedia_article.sql.bin
-curl http://localhost/uploads/osm/wikipedia_article.sql.bin --create-dirs -o $NOMINATIM_DATA_PATH/wikipedia_article.sql.bin
-curl http://localhost/uploads/osm/wikipedia_redirect.sql.bin --create-dirs -o $NOMINATIM_DATA_PATH/wikipedia_redirect.sql.bin
-curl http://localhost/uploads/osm/gb_postcode_data.sql.gz --create-dirs -o $NOMINATIM_DATA_PATH/gb_postcode_data.sql.gz
+curl http://192.168.185.160/uploads/osm/wikipedia_article.sql.bin --create-dirs -o $NOMINATIM_DATA_PATH/wikipedia_article.sql.bin
+curl http://192.168.185.160/uploads/osm/wikipedia_article.sql.bin --create-dirs -o $NOMINATIM_DATA_PATH/wikipedia_article.sql.bin
+curl http://192.168.185.160/uploads/osm/wikipedia_redirect.sql.bin --create-dirs -o $NOMINATIM_DATA_PATH/wikipedia_redirect.sql.bin
+curl http://192.168.185.160/uploads/osm/gb_postcode_data.sql.gz --create-dirs -o $NOMINATIM_DATA_PATH/gb_postcode_data.sql.gz
 
 # Allow user accounts read access to the data
 chmod 755 $NOMINATIM_DATA_PATH
