@@ -5,7 +5,7 @@ MAINTAINER Peter Evans <pete.evans@gmail.com>
 ENV NOMINATIM_VERSION 3.0.1
 
 # Let the container know that there is no TTY
-ENV DEBIAN_FRONTEND noninteractive
+ARG DEBIAN_FRONTEND=noninteractive
 
 # Set locale
 ENV LANG C.UTF-8
