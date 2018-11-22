@@ -3,9 +3,9 @@
 # Defaults
 NOMINATIM_DATA_PATH=${NOMINATIM_DATA_PATH:="/srv/nominatim/data"}
 NOMINATIM_PBF_PATH=${NOMINATIM_PBF_PATH:="maldives-latest.osm.pbf"}
-wget -O "$NOMINATIM_DATA_PATH/wikipedia_article.sql.bin" https://www.nominatim.org/data/wikipedia_article.sql.bin
-wget -O "$NOMINATIM_DATA_PATH/wikipedia_redirect.sql.bin" https://www.nominatim.org/data/wikipedia_redirect.sql.bin
-wget -O "$NOMINATIM_DATA_PATH/gb_postcode_data.sql.gz" https://www.nominatim.org/data/gb_postcode_data.sql.gz
+wget --output-document=data/wikipedia_article.sql.bin http://www.nominatim.org/data/wikipedia_article.sql.bin
+wget --output-document=data/wikipedia_redirect.sql.bin http://www.nominatim.org/data/wikipedia_redirect.sql.bin
+wget --output-document=data/gb_postcode_data.sql.gz http://www.nominatim.org/data/gb_postcode_data.sql.gz
 
 # Allow user accounts read access to the data
 chmod 755 $NOMINATIM_DATA_PATH
